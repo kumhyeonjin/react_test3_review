@@ -1,0 +1,251 @@
+@charset 'utf-8';
+
+:root {
+  --mw: 1400px;
+  --gap-a: 1rem;
+  --gap-b: 4rem;
+}
+.mw {
+  max-width: var(--mw);
+  width: calc(100% - var(--gap-a));
+  margin: auto;
+}
+.hd {
+  margin: 2rem auto 1rem;
+  display: flex;
+  align-items: center;
+}
+.hd.bar {
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+h1 {
+  width: 150px;
+}
+
+h1 img {
+  width: 100%;
+}
+.gnb {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  position: relative;
+}
+.gnb:after {
+  content: "";
+  background-color: rgb(189, 189, 189);
+  position: absolute;
+  width: 1px;
+  height: 30%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gnb a {
+  padding: var(--gap-a);
+  transition: 0.3s;
+}
+.gnb a:hover {
+  background-color: #eee;
+}
+.gnb > a.on {
+  background-color: rgb(255, 182, 182);
+}
+.per a {
+  padding: var(--gap-a);
+  color: #333;
+  transition: 0.3s;
+}
+.per a:hover {
+  background-color: #eee;
+}
+
+/* mainEvent */
+.mainEvent .eventList {
+  height: 30vh;
+  position: relative;
+  border-radius: var(--gap-a);
+  overflow: hidden;
+}
+.mainEvent .eventList > * {
+  position: absolute;
+}
+.mainEvent .eventList img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainEvent .eventList .infoList {
+  top: 50%;
+  transform: translatey(-50%);
+  left: var(--gap-a);
+}
+
+/* MainTopList */
+.MainTopList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.MainTopList h2 {
+  padding: var(--gap-a) 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.listCon {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.proList {
+  width: calc(100% / 3 - var(--gap-a));
+  margin-right: var(--gap-a);
+  margin-bottom: var(--gap-a);
+  position: relative;
+}
+
+.proList:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* ProductCard */
+.img {
+  /* border: 1px solid red; */
+  overflow: hidden;
+  position: relative;
+  padding-top: 100%;
+  border-radius: var(--gap-a);
+}
+.img > * {
+  position: absolute;
+}
+.img img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img .add {
+  text-transform: uppercase;
+  background-color: rgba(172, 172, 172, 0.7);
+  bottom: -100%;
+  width: 100%;
+  text-align: center;
+  padding: var(--gap-a);
+  transition: 0.3s;
+}
+.img .discount {
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: rgb(74, 74, 74);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.productCard:hover .img .add {
+  bottom: 0;
+}
+.btnAdd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+/* Footer */
+.footer {
+  padding: var(--gap-b) 0;
+}
+.ftCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.infoSite a {
+  padding-right: 1rem;
+}
+.email {
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.emailForm {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.email i {
+  padding-left: 1rem;
+}
+.copy {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.familySite a {
+  padding-left: 1.25rem;
+}
+
+/* Shop */
+.shop {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shop h2 {
+  /* border: 1px solid red; */
+  width: 100%;
+  padding: var(--gap-a) 0;
+}
+.btnCon {
+  width: 200px;
+  padding-right: var(--gap-a);
+}
+.btn {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: var(--gap-a);
+}
+.shopCon {
+  width: calc(100% - 200px);
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.shopList {
+  width: calc(100% / 4 - var(--gap-a));
+  margin-right: calc(var(--gap-a) + var(--gap-a) / 3);
+  margin-bottom: var(--gap-a);
+  position: relative;
+}
+
+.shopList:nth-child(4n) {
+  margin-right: 0;
+}
+
+/* Detail */
+.detailCon {
+  display: flex;
+  justify-content: space-between;
+}
+.detailCon .img {
+  width: 45%;
+  padding-top: 0;
+}
+.detailCon .img img {
+  width: 100%;
+}
+.detailCon .info {
+  width: calc(55% - var(--gap-b));
+}
